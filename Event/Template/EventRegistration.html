@@ -1,0 +1,105 @@
+<style type="text/css">
+.root{
+      display: flex;
+      align-items: center;
+     justify-content: center;
+ }
+ .subdiv{
+     width: 450;
+     height: auto;
+     border: 1px solid #ced6e0;
+     padding: 6px;
+     margin-top: 80px;
+     border-radius: 10px;
+     background-color: #dfe4ea;
+
+   }
+   .heading{
+     width: auto;
+     height:auto;
+     align-items: center;
+     justify-content: center;
+    display: flex;
+      border: 0.5px solid #ced6e0;
+     border-top-right-radius: 10px;
+     border-top-left-radius: 10px;
+     padding: 6px;
+    background-color: #8395a7;
+ }
+.title{
+      color: #FFFFFF;
+}
+.divbutton{
+align-items: center;
+     justify-content: center;
+    display: flex;
+    }
+.buttonstyle{
+width:120px;
+margin:5px;
+}
+.msg{color:green;}
+
+
+</style>
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<html lang="en">
+<head>
+
+    <title>Event</title>
+</head>
+<body>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <p class="navbar-brand" >NavBar</p>
+    <a class="nav-link" href="/displayallevents">Brows Events Event <span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="/likedevents">Go to liked Events</a>
+
+</nav>
+<form action="/eventsubmit" method="post" enctype="multipart/form-data"> {% csrf_token %}
+<div class="root">
+    <div class="subdiv">
+        <div class="heading">
+           <h3 class="title">Event Register</h3>
+       </div>
+    <div class="form-group">
+    <label >Event Name</label>
+    <input type="text" name="ename" class="form-control"  placeholder="Enter Event Name">
+    </div>
+    <div class="form-group">
+    <label >Event Date</label>
+    <input type="date" name="date" class="form-control"  placeholder="Enter Event Date">
+    </div>
+    <div class="form-group">
+    <label >Event Time</label>
+    <input type="time" name="time" class="form-control"  placeholder="Enter Event Time">
+    </div>
+        <div class="form-group">
+    <label >Event Location</label>
+    <input type="text" name="location" class="form-control"  placeholder="Enter Event Location">
+    </div>
+    <div class="form-group">
+    <label >Event Image</label>
+    <input type="file" name="image" class="form-control"  >
+    </div>
+    <div class="form-group divbutton">
+    <input type="submit" class="btn btn-primary buttonstyle"  >
+    <input type="reset" class="btn btn-primary buttonstyle"  >
+    </div>
+    <div class="form-group divbutton">
+    <label class="msg" >{{ msg }}</label>
+    </div>
+
+</div>
+</div>
+</form>
+
+</body>
+</html>
