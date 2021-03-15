@@ -1,6 +1,7 @@
 # Assignment-for-Ignis-Tech-Solution
 Here are some snapshots of the project i have created
 you will find the code uploaded in the repository
+This is all i could do in one day , Theres a lot to be improved but in due time
 
 ![1](https://user-images.githubusercontent.com/80708267/111194102-db19c600-85e0-11eb-9ee8-8419798a4203.JPG)
 
